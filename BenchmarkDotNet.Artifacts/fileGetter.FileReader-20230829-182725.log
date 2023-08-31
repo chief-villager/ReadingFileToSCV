@@ -1,0 +1,148 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 1 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in /Users/admin/Documents/fileGetter/bin/Release/net7.0/3b10fe4f-542e-4d40-aca0-a143901b4ca8
+// command took 2.13 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in /Users/admin/Documents/fileGetter/bin/Release/net7.0/3b10fe4f-542e-4d40-aca0-a143901b4ca8
+// command took 4.86 sec and exited with 0
+// ***** Done, took 00:00:07 (7.2 sec)   *****
+// Found 1 benchmarks:
+//   FileReader.GetData: DefaultJob
+
+// **************************
+// Benchmark: FileReader.GetData: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 3b10fe4f-542e-4d40-aca0-a143901b4ca8.dll --anonymousPipes 107 108 --benchmarkName fileGetter.FileReader.GetData --job Default --benchmarkId 0 in /Users/admin/Documents/fileGetter/bin/Release/net7.0/3b10fe4f-542e-4d40-aca0-a143901b4ca8/bin/Release/net7.0
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.7
+// Runtime=.NET 7.0.5 (7.0.523.17405), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 371705.00 ns, 371.7050 us/op
+WorkloadJitting  1: 1 op, 1579833257.00 ns, 1.5798 s/op
+
+OverheadJitting  2: 1 op, 322.00 ns, 322.0000 ns/op
+WorkloadJitting  2: 1 op, 316530050.00 ns, 316.5301 ms/op
+
+WorkloadPilot    1: 2 op, 640704512.00 ns, 320.3523 ms/op
+
+WorkloadWarmup   1: 2 op, 576124444.00 ns, 288.0622 ms/op
+WorkloadWarmup   2: 2 op, 601970518.00 ns, 300.9853 ms/op
+WorkloadWarmup   3: 2 op, 590549720.00 ns, 295.2749 ms/op
+WorkloadWarmup   4: 2 op, 872507192.00 ns, 436.2536 ms/op
+WorkloadWarmup   5: 2 op, 587307254.00 ns, 293.6536 ms/op
+WorkloadWarmup   6: 2 op, 586035281.00 ns, 293.0176 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 2 op, 637055212.00 ns, 318.5276 ms/op
+WorkloadActual   2: 2 op, 687143170.00 ns, 343.5716 ms/op
+WorkloadActual   3: 2 op, 602373205.00 ns, 301.1866 ms/op
+WorkloadActual   4: 2 op, 579400696.00 ns, 289.7003 ms/op
+WorkloadActual   5: 2 op, 593724257.00 ns, 296.8621 ms/op
+WorkloadActual   6: 2 op, 601113635.00 ns, 300.5568 ms/op
+WorkloadActual   7: 2 op, 576613494.00 ns, 288.3067 ms/op
+WorkloadActual   8: 2 op, 571165712.00 ns, 285.5829 ms/op
+WorkloadActual   9: 2 op, 580866944.00 ns, 290.4335 ms/op
+WorkloadActual  10: 2 op, 593166016.00 ns, 296.5830 ms/op
+WorkloadActual  11: 2 op, 568725037.00 ns, 284.3625 ms/op
+WorkloadActual  12: 2 op, 569197113.00 ns, 284.5986 ms/op
+WorkloadActual  13: 2 op, 575452132.00 ns, 287.7261 ms/op
+WorkloadActual  14: 2 op, 567454415.00 ns, 283.7272 ms/op
+WorkloadActual  15: 2 op, 575331756.00 ns, 287.6659 ms/op
+WorkloadActual  16: 2 op, 568403555.00 ns, 284.2018 ms/op
+WorkloadActual  17: 2 op, 580463531.00 ns, 290.2318 ms/op
+WorkloadActual  18: 2 op, 569103208.00 ns, 284.5516 ms/op
+WorkloadActual  19: 2 op, 592760286.00 ns, 296.3801 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 2 op, 602373205.00 ns, 301.1866 ms/op
+WorkloadResult   2: 2 op, 579400696.00 ns, 289.7003 ms/op
+WorkloadResult   3: 2 op, 593724257.00 ns, 296.8621 ms/op
+WorkloadResult   4: 2 op, 601113635.00 ns, 300.5568 ms/op
+WorkloadResult   5: 2 op, 576613494.00 ns, 288.3067 ms/op
+WorkloadResult   6: 2 op, 571165712.00 ns, 285.5829 ms/op
+WorkloadResult   7: 2 op, 580866944.00 ns, 290.4335 ms/op
+WorkloadResult   8: 2 op, 593166016.00 ns, 296.5830 ms/op
+WorkloadResult   9: 2 op, 568725037.00 ns, 284.3625 ms/op
+WorkloadResult  10: 2 op, 569197113.00 ns, 284.5986 ms/op
+WorkloadResult  11: 2 op, 575452132.00 ns, 287.7261 ms/op
+WorkloadResult  12: 2 op, 567454415.00 ns, 283.7272 ms/op
+WorkloadResult  13: 2 op, 575331756.00 ns, 287.6659 ms/op
+WorkloadResult  14: 2 op, 568403555.00 ns, 284.2018 ms/op
+WorkloadResult  15: 2 op, 580463531.00 ns, 290.2318 ms/op
+WorkloadResult  16: 2 op, 569103208.00 ns, 284.5516 ms/op
+WorkloadResult  17: 2 op, 592760286.00 ns, 296.3801 ms/op
+// GC:  0 0 0 401856 2
+// Threading:  65 0 2
+
+// AfterAll
+// Benchmark Process 58412 has exited with code 0.
+
+Mean = 290.156 ms, StdErr = 1.440 ms (0.50%), N = 17, StdDev = 5.938 ms
+Min = 283.727 ms, Q1 = 284.599 ms, Median = 288.307 ms, Q3 = 296.380 ms, Max = 301.187 ms
+IQR = 11.782 ms, LowerFence = 266.926 ms, UpperFence = 314.053 ms
+ConfidenceInterval = [284.374 ms; 295.939 ms] (CI 99.9%), Margin = 5.783 ms (1.99% of Mean)
+Skewness = 0.6, Kurtosis = 1.81, MValue = 2.6
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2023-08-29 18:27 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/fileGetter.FileReader-report.csv
+  BenchmarkDotNet.Artifacts/results/fileGetter.FileReader-report-github.md
+  BenchmarkDotNet.Artifacts/results/fileGetter.FileReader-report.html
+
+// * Detailed results *
+FileReader.GetData: DefaultJob
+Runtime = .NET 7.0.5 (7.0.523.17405), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 290.156 ms, StdErr = 1.440 ms (0.50%), N = 17, StdDev = 5.938 ms
+Min = 283.727 ms, Q1 = 284.599 ms, Median = 288.307 ms, Q3 = 296.380 ms, Max = 301.187 ms
+IQR = 11.782 ms, LowerFence = 266.926 ms, UpperFence = 314.053 ms
+ConfidenceInterval = [284.374 ms; 295.939 ms] (CI 99.9%), Margin = 5.783 ms (1.99% of Mean)
+Skewness = 0.6, Kurtosis = 1.81, MValue = 2.6
+-------------------- Histogram --------------------
+[283.683 ms ; 289.745 ms) | @@@@@@@@@@
+[289.745 ms ; 295.752 ms) | @@
+[295.752 ms ; 301.815 ms) | @@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.13.7, macOS Monterey 12.6.8 (21G725) [Darwin 21.6.0]
+Intel Core i5-5257U CPU 2.70GHz (Broadwell), 1 CPU, 4 logical and 2 physical cores
+.NET SDK 7.0.302
+  [Host]     : .NET 7.0.5 (7.0.523.17405), X64 RyuJIT AVX2
+  DefaultJob : .NET 7.0.5 (7.0.523.17405), X64 RyuJIT AVX2
+
+
+|  Method |     Mean |   Error |  StdDev | Allocated |
+|-------- |---------:|--------:|--------:|----------:|
+| GetData | 290.2 ms | 5.78 ms | 5.94 ms | 196.22 KB |
+
+// * Hints *
+Outliers
+  FileReader.GetData: Default -> 2 outliers were removed (318.53 ms, 343.57 ms)
+
+// * Legends *
+  Mean      : Arithmetic mean of all measurements
+  Error     : Half of 99.9% confidence interval
+  StdDev    : Standard deviation of all measurements
+  Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 ms      : 1 Millisecond (0.001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:18 (18.99 sec), executed benchmarks: 1
+
+Global total time: 00:00:26 (26.92 sec), executed benchmarks: 1
+// * Artifacts cleanup *
+Artifacts cleanup is finished
